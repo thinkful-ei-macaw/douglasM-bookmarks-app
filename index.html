@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main class="bookmark js-bookmark">
+    <h1>My Bookmarks</h1>
+    <div class="container js-container">
+      <form id="js-new-bookmark">
+      <button class="js-new-bookmark">New Bookmark</button>
+      <select>
+        <option value="" disabled selected hidden>Filter By:</option>
+        <option value="five-star">5 Star</option>
+        <option value="four-star">4 Star</option>
+        <option value="three-star">3 Star</option>
+        <option value="two-star">2 Star</option>
+        <option value="one-star">1 Star</option>
+      </select>
+    </form>
+    </div>
+    <div class="bookmark-items js-bookmark-items">
+      <ul class="bookmark-list js-bookmark-list">
+      </ul>
+    </div>
+  </main>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script type="module" src="scripts/index.js"></script>
+</body>
+</html>

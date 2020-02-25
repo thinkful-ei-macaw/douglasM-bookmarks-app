@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarks</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>My Bookmarks</h1>
+      <button id="new-bookmark">New Bookmark</button>
+      <select>
+        <option value="" disabled selected hidden>Filter By:</option>
+        <option value="five-star">5 Star</option>
+        <option value="four-star">4 Star</option>
+        <option value="three-star">3 Star</option>
+        <option value="two-star">2 Star</option>
+        <option value="one-star">1 Star</option>
+      </select>
+    </div>
+    <div class=>
+      <ul class="bookmark-list js-bookmark-list">
+        <li class="js-bookmark-item" data-item-id="1">
+          <div class="title-bar">
+          <span class="name">Icy-Veins</span>
+          <button class="bookmark-delete js-bookmark-delete">Delete</button>
+          </div>
+          <button class="visit-bookmark js-visit-bookmark">
+            <span class="button-label">Visit Site</span>
+          </button>
+          <span class="rating">5 Star</span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sed itaque velit fuga expedita voluptas aut voluptate? Voluptates, omnis, sunt, ipsa quas saepe ex facilis voluptate corrupti quos porro voluptas.</p>
+        </li>
+        <li class="js-bookmark-item" data-item-id="2">
+          <span class="name">Protection Warrior Guide</span>
+          <span class="rating">4 Star</span>
+        </li>
+        <li class="js-bookmark-item" data-item-id="3">
+          <span class="name">Restoration Shaman Guide</span>
+          <span class="rating">3 Star</span>
+        </li>
+        <li class="js-bookmark-item" data-item-id="4">
+          <span class="name">Discipline Priest Guide</span>
+          <span class="rating">2 Star</span>
+        </li>
+        <li class="js-bookmark-item" data-item-id="5">
+          <span class="name">Assassination Rogue Guide</span>
+          <span class="rating">1 Star</span>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
+
+<code>
+  const store = {
+    bookmarks: [
+      {
+        id: '7ddr',
+        title: 'Icy-Veins',
+        rating: 5,
+        url: 'https://www.icy-veins.com/wow/',
+        description: 'lorem ipsum dolor',
+        expanded: true
+      }
+      ...
+    ],
+    adding: false,
+    error: null,
+    filter: 0
+  };
+</code>

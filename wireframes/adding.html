@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../index.css">
+  <title>Bookmarks</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>My Bookmarks</h1>
+      <button id="new-bookmark" hidden >New Bookmark</button>
+      <select hidden>
+        <option value="" disabled selected hidden>Filter By:</option>
+        <option value="five-star">5 Star</option>
+        <option value="four-star">4 Star</option>
+        <option value="three-star">3 Star</option>
+        <option value="two-star">2 Star</option>
+        <option value="one-star">1 Star</option>
+      </select>
+    </div>
+    <div class="bookmark-list">
+      <form id="js-bookmark-form">
+        <label for="new-bookmark-url">Add a new bookmark:</label>
+        <br>
+        <input type="url" name="new-bookmark-url" class="js-url-entry" placeholder="e.g., https://www.google.com/">
+        <br>
+        <label for="new-bookmark-title">Title:</label>
+        <br>
+        <input type="text" name="new-bookmark-title" class="js-title-entry" placeholder="bookmark name">
+        <br>
+        <label for="new-bookmark-rating">Rating:</label>
+        <br>
+        <input type="number" name="new-bookmark-rating" class="js-rating-entry" placeholder="e.g., 3" min="1" max="5">
+        <br>
+        <button type="submit" class="js-cancel">Cancel</button>
+        <button type="submit" class="js-create">Create</button>
+      </form>
+      <ul class="bookmark-list js-bookmark-list">
+        <li class="js-bookmark-item" data-item-id="1">
+          <span class="name">Icy-Veins</span>
+          <span class="rating">5 Star</span>
+        </li>
+        <li class="js-bookmark-item" data-item-id="2">
+          <span class="name">Protection Warrior Guide</span>
+          <span class="rating">4 Star</span>
+        </li>
+        <li class="js-bookmark-item" data-item-id="3">
+          <span class="name">Restoration Shaman Guide</span>
+          <span class="rating">3 Star</span>
+        </li>
+        <li class="js-bookmark-item" data-item-id="4">
+          <span class="name">Discipline Priest Guide</span>
+          <span class="rating">2 Star</span>
+        </li>
+        <li class="js-bookmark-item" data-item-id="5">
+          <span class="name">Assassination Rogue Guide</span>
+          <span class="rating">1 Star</span>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
+
+<code>
+  const store = {
+  bookmarks: [...],
+  adding: true,
+  error: null,
+  filter: 0
+};
+</code>
