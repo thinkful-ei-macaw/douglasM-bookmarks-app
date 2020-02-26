@@ -12,6 +12,10 @@ header {
   justify-content: center;
 }
 
+p {
+  max-width: 200px;
+}
+
 .bookmark form {
   display: inline-block;
   max-width: 90%;

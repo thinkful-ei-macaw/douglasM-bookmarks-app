@@ -35,8 +35,6 @@ const generateBookmarkElement = function (item) {
     <button class="delete js-delete" id="js-delete">
       <span class="button-label">Delete</span>
     </button>
-    <button class="collapse" id="js-collapse">Collapse</button>
-    </li>
   `;
   }
   return `
@@ -60,7 +58,7 @@ const generateNewBookmarkForm = function() {
         <br>
         <label for="rating">Rating:</label>
         <br>
-        <input type="number" name="rating" id="rating" class="js-rating-entry" placeholder="e.g., 3" min="1" max="5" />
+        <input type="number" name="rating" id="rating" class="js-rating-entry" placeholder="e.g., 3" min="1" max="5" required />
         <br>
         <label for="desc">Description: (Optional)</label>
         <br>
@@ -185,17 +183,13 @@ const handleListItemSelected = function () {
     const id = getBookmarkIdFromElement(event.currentTarget);
     store.toggleExpanded(id);
     render();
+    store.toggleExpanded(id);
   });
 };
 
-const handleCollapseClicked = function () {
-  $('.js-bookmark-list').on('click', '#js-collapse', function(event) {
-    event.preventDefault();
-    const id = getBookmarkIdFromExpanded(event.currentTarget);
-    store.toggleExpanded(id);
-    render();
-  });
-};
+
+// this function will collapse the expanded bookmark when you click outside
+// of the bookmarks field.
 
 const handleFilterChange = function () {
   $('.js-bookmark').on('change', '#js-filter', function(event) {
@@ -239,7 +233,6 @@ const bindEventListeners = function () {
   handleListItemSelected();
   handleFilterChange();
   handleDeleteClicked();
-  handleCollapseClicked();
 };
 
 export default {
