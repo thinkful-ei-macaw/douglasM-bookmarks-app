@@ -1,4 +1,4 @@
-This is Douglas Miner's "Bookmark App". https://github.com/thinkful-ei-macaw/douglasM-bookmarks-app
+This is Douglas Miner's "Bookmark App". https://thinkful-ei-macaw.github.io/douglasM-bookmarks-app/
 
 
 #### This bookmark app will allow a user to add and delete their favorites bookmarks.
