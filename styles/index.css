@@ -1,0 +1,80 @@
+body {
+  display:flexbox;
+  background-color: #f8f8ff;
+  color:#00008b;
+  font-family: 'Lucida Grande';
+  font-size: 18px;
+  font-weight: 600;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.bookmark form {
+  display: inline-block;
+  max-width: 90%;
+}
+
+button {
+  max-width: 125px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+button, select {
+  cursor: pointer;
+}
+
+#new-bookmark {
+  margin: 10px;
+}
+
+#filter {
+  margin: 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  justify-content: center;
+}
+li {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border: solid 1px white;
+}
+
+li span.title{
+  margin-bottom: 20px;
+}
+
+button.js-cancel{
+  align-self: flex-start;
+}
+
+.bookmark {
+  display: flex;
+  justify-content: center;
+}
+
+.bookmark form {
+  margin-bottom: 20px;
+}
+
+.bookmark-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+@media (min-width: 1024px) {
+  li {
+    max-width: 450px;
+  }
+}

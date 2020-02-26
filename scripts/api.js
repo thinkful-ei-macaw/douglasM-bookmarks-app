@@ -4,8 +4,9 @@ const getBookmarks = function() {
   return fetch(BASE_URL + '/bookmarks');
 };
 
-const createBookmark = function(name, url) {
-  return fetch(`${BASE_URL}/bookmarks`, {method:'POST',headers: {'Content-Type': 'application/json'}, body: JSON.stringify({name,url})});
+const createBookmark = function(obj) {
+
+  return fetch(`${BASE_URL}/bookmarks`, {method:'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(obj)});
 };
 
 const deleteBookmark = function(id) {
