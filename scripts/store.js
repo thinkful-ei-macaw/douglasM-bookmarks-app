@@ -1,6 +1,4 @@
-const bookmarks=[
-  {}
-];
+const bookmarks=[];
 const adding = false;
 let error = {
   code: null,

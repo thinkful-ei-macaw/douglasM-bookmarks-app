@@ -56,7 +56,6 @@ button, select {
 }
 
 ul {
-  list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,7 +63,6 @@ ul {
 
 li.js-bookmark-item-expanded {
   display: flex;
-  list-style: none;
   flex-direction: column;
   margin-bottom: 20px;
   align-items: center;
@@ -77,6 +75,7 @@ li.js-bookmark-item {
   flex-direction: row;
   justify-content: space-between;
   font-size: 14px;
+  cursor: pointer;
 }
 
 li span.title{
