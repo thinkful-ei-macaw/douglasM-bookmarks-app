@@ -38,6 +38,11 @@ button {
   margin-bottom: 10px;
 }
 
+img {
+  max-width: 300px;
+  max-height: 200px;
+}
+
 select {
   background-color: darkblue;
   color: white;
