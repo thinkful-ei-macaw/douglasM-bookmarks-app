@@ -10,7 +10,8 @@ const generateStart = function() {
   return `
     <form id="js-new-bookmark">
     <button class="new-bookmark js-new-bookmark">New Bookmark</button>
-    <select id="js-filter">
+    <label for="js-filter">Filter By:</label>
+    <select name="selector" id="js-filter">
       <option value="" disabled selected hidden>Filter By:</option>
       <option value="5">5 Star</option>
       <option value="4">4 Star</option>
@@ -133,6 +134,7 @@ const render = function () {
 const handleNewBookmarkClicked = function() {
   $('.js-bookmark').on('submit', '#js-new-bookmark', function (event) {
     event.preventDefault();
+    render();
     store.adding = !store.adding;
     render();
   });

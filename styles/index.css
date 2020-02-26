@@ -1,6 +1,6 @@
 body {
   display:flexbox;
-  background-color: #f8f8ff;
+  background-color: ghostwhite;
   color:#00008b;
   font-family: 'Lucida Grande';
   font-size: 18px;
@@ -16,15 +16,31 @@ p {
   max-width: 200px;
 }
 
-.bookmark form {
-  display: inline-block;
-  max-width: 90%;
+.bookmark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookmark form#bookmarkForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
+  background-color: darkblue;
+  color: white;
+  min-width: 100px;
   max-width: 125px;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+
+select {
+  background-color: darkblue;
+  color: white;
 }
 
 button, select {
@@ -43,31 +59,38 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  max-width: 80%;
   justify-content: center;
 }
-li {
+
+li.js-bookmark-item-expanded {
   display: flex;
   list-style: none;
   flex-direction: column;
   margin-bottom: 20px;
+  align-items: center;
+  border: solid 1px darkblue;
+  border-radius: .5em;
+}
+
+li.js-bookmark-item {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
 }
 
 li span.title{
   margin-bottom: 20px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+li span.rating{
+  font-size: 14px;
 }
 
 button.js-cancel{
   align-self: flex-start;
-}
-
-.bookmark {
-  display: flex;
-  justify-content: center;
-}
-
-.bookmark form {
-  margin-bottom: 20px;
 }
 
 .bookmark-container {
@@ -76,8 +99,29 @@ button.js-cancel{
   flex-direction: row;
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  body {
+    background-color: darkblue;
+    color: ghostwhite;
+  }
+
+  li.js-bookmark-item-expanded {
+    border: solid 1px ghostwhite;
+  }
+
+  button, select {
+    background-color: ghostwhite;
+    color: darkblue;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   li {
-    max-width: 450px;
+    width: 500px;
+  }
+
+  p {
+    margin: 10px;
+    max-width: 500px;
   }
 }
