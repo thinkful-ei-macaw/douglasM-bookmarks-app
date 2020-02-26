@@ -39,8 +39,8 @@ button {
 }
 
 img {
-  max-width: 300px;
-  max-height: 200px;
+  max-width: 150px;
+  max-height: 100;
 }
 
 select {
@@ -123,6 +123,11 @@ button.js-cancel{
 @media screen and (min-width: 1024px) {
   li {
     width: 500px;
+  }
+
+  img {
+    max-width: 300px;
+    max-height: 200px;
   }
 
   p {
